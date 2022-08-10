@@ -22,7 +22,7 @@ class BulkdiscountsController < ApplicationController
       redirect_to "/merchants/#{merchant.id}/bulkdiscounts"
     else
       redirect_to "/merchants/#{merchant.id}/bulkdiscounts/new"
-      flash[:alert] = "Error: #{error_message(item.errors)}"
+      flash[:alert] = "Error: #{error_message(bulkdiscount.errors)}"
     end
   end
 
