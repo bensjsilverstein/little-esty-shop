@@ -43,7 +43,7 @@ class BulkdiscountsController < ApplicationController
 
     if @bulkdiscount.update(bulkdiscount_params)
       redirect_to "/merchants/#{@merchant.id}/bulkdiscounts/#{@bulkdiscount.id}"
-      # flash[:success] = "Update to #{@bulkdiscount.name} was successful!"
+      flash[:success] = "Update to #{@bulkdiscount.name} was successful!"
     else
       redirect_to "/merchants/#{@merchant.id}/bulkdiscounts/#{@bulkdiscount.id}/edit"
       flash[:alert] = "Error: #{error_message(@bulkdiscount.errors)}"
